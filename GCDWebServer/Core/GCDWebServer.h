@@ -77,16 +77,18 @@ typedef GCDWebServerResponse* (^GCDWebServerProcessBlock)(GCDWebServerRequest* r
 extern NSString* const GCDWebServerOption_Port;
 
 /**
- *  The Bonjour name used by the GCDWebServer (NSString).
+ *  The Bonjour name used by the GCDWebServer (NSString). If set to an empty string,
+ *  the name will automatically take the value of the GCDWebServerOption_ServerName
+ *  option. If this option is set to nil, Bonjour will be disabled.
  *
- *  The default value is an empty string i.e. use the GCDWebServerOption_ServerName value.
+ *  The default value is an empty string.
  */
 extern NSString* const GCDWebServerOption_BonjourName;
 
 /**
  *  The Bonjour service type used by the GCDWebServer (NSString).
  *
- *  The default value is "_http._tcp", standard HTTP web server.
+ *  The default value is "_http._tcp", the service type for HTTP web servers.
  */
 extern NSString* const GCDWebServerOption_BonjourType;
 
