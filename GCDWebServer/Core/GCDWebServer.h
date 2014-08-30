@@ -79,7 +79,7 @@ extern NSString* const GCDWebServerOption_Port;
 /**
  *  The Bonjour name used by the GCDWebServer (NSString).
  *
- *  The default value is an empty string i.e. use the computer / device name.
+ *  The default value is an empty string i.e. use the GCDWebServerOption_ServerName value.
  */
 extern NSString* const GCDWebServerOption_BonjourName;
 
@@ -341,7 +341,7 @@ extern NSString* const GCDWebServerAuthenticationMethod_DigestAccess;
 
 /**
  *  Starts the server on port 8080 (OS X & iOS Simulator) or port 80 (iOS)
- *  using the computer / device name for as the Bonjour name.
+ *  using the default Bonjour name.
  *
  *  Returns NO if the server failed to start.
  */
@@ -350,7 +350,7 @@ extern NSString* const GCDWebServerAuthenticationMethod_DigestAccess;
 /**
  *  Starts the server on a given port and with a specific Bonjour name.
  *  Pass a nil Bonjour name to disable Bonjour entirely or an empty string to
- *  use the computer / device name.
+ *  use the default name.
  *
  *  Returns NO if the server failed to start.
  */
